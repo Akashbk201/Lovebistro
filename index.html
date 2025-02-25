@@ -1,0 +1,1104 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-clifford: #da373d;
+      }
+
+    @layer components {
+        .announcement-txt {
+            @apply flex justify-center gap-1 text-base text-gray-950 font-medium;
+        }
+        .header-box {
+            @apply flex flex-col md:flex-row h-auto md:h-16 items-center;
+        }
+       .nav-p {
+        @apply text-white;
+       }
+        .nav-a {
+            @apply text-lg inline font-normal text-white hover:text-[#cc5500] transition-all delay-75;
+        }
+        .hero-bg {
+            @apply bg-[url(images/hero-bg.png)] bg-cover bg-no-repeat;
+        }
+        
+        .hero-box {
+            @apply flex flex-col md:flex-row gap-6 h-auto md:h-[480px] lg:h-[680px] items-center;
+        }
+        .main-btn {
+            @apply inline-block w-48 h-12 leading-10 bg-[#cc5500] rounded-3xl text-center hover:bg-orange-800 transition-all delay-200 pt-2;
+        }
+        .mainbtn-text {
+            @apply inline-block text-lg text-white font-semibold;
+        }
+        .vec-box {
+            @apply absolute bottom-4 left-4 bg-white w-32 rounded-lg invisible transition-all delay-150 group-hover:visible;
+        }
+        .food-box {
+            @apply bg-[#bbbbbb] px-4 py-4 text-center rounded-lg relative;
+        }
+        .food-price {
+            @apply text-lg font-bold text-[#333333] pb-1 pt-4;
+        }
+        .prv-price {
+            @apply font-medium text-[#ffffff6b];
+        }
+        .food-rating {
+            @apply flex justify-center gap-1;
+        }
+        .food-rating svg {
+            @apply text-[#ffe600];
+        }
+        .secondary-btn {
+            @apply inline-block w-44 h-10 bg-[#fbf3d5] border-[#333333] border-2 rounded-full cursor-pointer mb-8;
+        }
+        .food-offer {
+            @apply inline-block bg-[#cc5500] px-2 text-sm font-bold text-[#fffdd0] rounded-full absolute top-8 right-6;
+        }
+        .feature-title {
+            @apply text-lg md:text-2xl font-bold text-[#fffdd0] py-2;
+        }
+        .feature-text {
+            @apply text-left text-base md:text-lg text-[#bbbbbb] ;
+        }
+        .feature-box {
+            @apply bg-[#ffffff29] text-left px-6 py-4 rounded-lg;
+        }
+        .form-box {
+            @apply bg-[#bbbbbb] py-6 px-4 w-full xl:w-3/5 mt-8 rounded-lg;
+        }
+        input {
+            @apply w-full bg-white my-2 px-2 py-2 rounded-lg text-lg font-normal;
+        }
+        .form-btn {
+            @apply bg-[#cc5500] text-[#fffdd0] w-full px-8;
+        }
+        .review-box {
+            @apply bg-[#ffffff29] text-left px-6 py-4 rounded-lg relative z-20;
+        }
+        .review-rating {
+            @apply flex justify-start gap-1;
+        }
+        .review-rating svg {
+            @apply text-[#ffe600];
+        }
+        .review-txt {
+            @apply text-sm md:text-base lg:text-lg text-[#fffdd0] font-light md:font-normal py-4 text-left drop-shadow-sm;
+        }
+        .review-author {
+            @apply text-base text-[#fffdd0] font-normal py-4 text-left drop-shadow-xl;
+        }
+        .fotter-title {
+            @apply text-xl font-normal text-[#d6dac8]; 
+        }
+        .footer-items {
+            @apply text-[#fffdd0] text-lg font-light text-left;
+        }
+        .footer-txt {
+            @apply text-[#d6dac8] font-normal py-4 text-lg w-2/3;
+        }
+       
+    }
+    </style>
+
+</head>
+
+<body>
+    <!-- Announce Bar -->
+
+    <section class="bg-orange-300 py-1">
+        <div class="container m-auto px-6">
+            <!-- Component: Carousel with indicators outside -->
+            <div class="relative w-full glide-05">
+                <!-- Slides -->
+                <div class="overflow-hidden" data-glide-el="track">
+                    <ul
+                        class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
+                        <li>
+                            <p class="announcement-txt"><span><svg class="w-5" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M17.6177 5.9681L19.0711 4.51472L20.4853 5.92893L19.0319 7.38231C20.2635 8.92199 21 10.875 21 13C21 17.9706 16.9706 22 12 22C7.02944 22 3 17.9706 3 13C3 8.02944 7.02944 4 12 4C14.125 4 16.078 4.73647 17.6177 5.9681ZM12 20C15.866 20 19 16.866 19 13C19 9.13401 15.866 6 12 6C8.13401 6 5 9.13401 5 13C5 16.866 8.13401 20 12 20ZM11 8H13V14H11V8ZM8 1H16V3H8V1Z">
+                                        </path>
+                                    </svg></span>
+                                Time 3:00 to 10:30 PM</p>
+                        </li>
+                        <li>
+                            <p class="announcement-txt"><span><svg class="w-5" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M9.36556 10.6821C10.302 12.3288 11.6712 13.698 13.3179 14.6344L14.2024 13.3961C14.4965 12.9845 15.0516 12.8573 15.4956 13.0998C16.9024 13.8683 18.4571 14.3353 20.0789 14.4637C20.599 14.5049 21 14.9389 21 15.4606V19.9234C21 20.4361 20.6122 20.8657 20.1022 20.9181C19.5723 20.9726 19.0377 21 18.5 21C9.93959 21 3 14.0604 3 5.5C3 4.96227 3.02742 4.42771 3.08189 3.89776C3.1343 3.38775 3.56394 3 4.07665 3H8.53942C9.0611 3 9.49513 3.40104 9.5363 3.92109C9.66467 5.54288 10.1317 7.09764 10.9002 8.50444C11.1427 8.9484 11.0155 9.50354 10.6039 9.79757L9.36556 10.6821ZM6.84425 10.0252L8.7442 8.66809C8.20547 7.50514 7.83628 6.27183 7.64727 5H5.00907C5.00303 5.16632 5 5.333 5 5.5C5 12.9558 11.0442 19 18.5 19C18.667 19 18.8337 18.997 19 18.9909V16.3527C17.7282 16.1637 16.4949 15.7945 15.3319 15.2558L13.9748 17.1558C13.4258 16.9425 12.8956 16.6915 12.3874 16.4061L12.3293 16.373C10.3697 15.2587 8.74134 13.6303 7.627 11.6707L7.59394 11.6126C7.30849 11.1044 7.05754 10.5742 6.84425 10.0252Z">
+                                        </path>
+                                    </svg></span>
+                                For Inquiry: +1123 456 7890</p>
+                        </li>
+                        <li>
+                            <p class="announcement-txt"> <span><svg class="w-5" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M10.0544 2.0941C11.1756 1.13856 12.8248 1.13855 13.9461 2.09411L15.2941 3.24286C15.4542 3.37935 15.6533 3.46182 15.8631 3.47856L17.6286 3.61945C19.0971 3.73663 20.2633 4.9028 20.3805 6.37131L20.5214 8.13679C20.5381 8.34654 20.6205 8.54568 20.757 8.70585L21.9058 10.0539C22.8614 11.1751 22.8614 12.8243 21.9058 13.9456L20.757 15.2935C20.6206 15.4537 20.538 15.6529 20.5213 15.8627L20.3805 17.6281C20.2633 19.0967 19.0971 20.2628 17.6286 20.3799L15.8631 20.5208C15.6533 20.5376 15.4542 20.6201 15.2941 20.7566L13.9461 21.9053C12.8248 22.8609 11.1756 22.8608 10.0543 21.9053L8.70631 20.7566C8.54615 20.6201 8.34705 20.5376 8.1373 20.5209L6.37184 20.3799C4.9033 20.2627 3.73716 19.0966 3.61997 17.6281L3.47906 15.8627C3.46232 15.6529 3.37983 15.4538 3.24336 15.2936L2.0946 13.9455C1.13905 12.8243 1.13904 11.1752 2.09458 10.0539L3.24334 8.70589C3.37983 8.54573 3.46234 8.34654 3.47907 8.13678L3.61996 6.3713C3.73714 4.90278 4.90327 3.73665 6.3718 3.61946L8.13729 3.47857C8.34705 3.46183 8.54619 3.37935 8.70636 3.24286L10.0544 2.0941ZM12.6488 3.61632C12.2751 3.29782 11.7253 3.29781 11.3516 3.61632L10.0036 4.76509C9.5231 5.17456 8.92568 5.42201 8.29637 5.47223L6.5309 5.61312C6.04139 5.65219 5.65268 6.04089 5.61362 6.53041L5.47272 8.29593C5.4225 8.92521 5.17505 9.52259 4.76559 10.0031L3.61683 11.3511C3.29832 11.7248 3.29831 12.2746 3.61683 12.6483L4.76559 13.9963C5.17506 14.4768 5.4225 15.0743 5.47275 15.7035L5.61363 17.469C5.65268 17.9585 6.04139 18.3473 6.53092 18.3863L8.29636 18.5272C8.92563 18.5774 9.5231 18.8249 10.0036 19.2344L11.3516 20.3831C11.7254 20.7016 12.2751 20.7016 12.6488 20.3831L13.9969 19.2343C14.4773 18.8249 15.0747 18.5774 15.704 18.5272L17.4695 18.3863C17.959 18.3472 18.3478 17.9585 18.3868 17.469L18.5277 15.7035C18.5779 15.0742 18.8253 14.4768 19.2349 13.9964L20.3836 12.6483C20.7022 12.2746 20.7021 11.7249 20.3836 11.3511L19.2348 10.0031C18.8253 9.52259 18.5779 8.92519 18.5277 8.2959L18.3868 6.53041C18.3478 6.0409 17.959 5.65219 17.4695 5.61312L15.704 5.47224C15.0748 5.42203 14.4773 5.17455 13.9968 4.76508L12.6488 3.61632ZM14.8284 7.75718L16.2426 9.1714L9.17154 16.2425L7.75733 14.8282L14.8284 7.75718ZM10.2322 10.232C9.64641 10.8178 8.69667 10.8178 8.11088 10.232C7.52509 9.6463 7.52509 8.69652 8.11088 8.11073C8.69667 7.52494 9.64641 7.52494 10.2322 8.11073C10.818 8.69652 10.818 9.6463 10.2322 10.232ZM13.7677 15.8889C14.3535 16.4747 15.3032 16.4747 15.889 15.8889C16.4748 15.3031 16.4748 14.3534 15.889 13.7676C15.3032 13.1818 14.3535 13.1818 13.7677 13.7676C13.1819 14.3534 13.1819 15.3031 13.7677 15.8889Z">
+                                        </path>
+                                    </svg></span>
+                                Get up to 10% off on first order
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- End Carousel with indicators outside -->
+        </div>
+    </section>
+
+    <!-- Nav Section -->
+    <section class="bg-[#333333] py-4">
+        <div class="container m-auto px-6">
+            <!-- Component: Three columns even layout -->
+            <section>
+                <div class="container m-auto">
+                    <div class="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
+                        <div class="col-span-4 md:col-span-2 lg:col-span-4">
+                            <div class="header-box justify-start">
+                                <a href="#"><img class="w-32 lg:w-44" src="images/logo-light.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-span-4 hidden md:block">
+                            <div class="header-box justify-evenly gap-4 text-white">
+                                <p class="nav-p"><a class="nav-a" href="#">Home</a></p>
+                                <p class="nav-p"><a class="nav-a" href="#">About</a></p>
+                                <p class="nav-p"><a class="nav-a" href="#">Service</a></p>
+                                <p class="nav-p"><a class="nav-a" href="#">Menus</a></p>
+                                <p class="nav-p"><a class="nav-a" href="#">Blog</a></p>
+                            </div>
+                        </div>
+                        <div class="col-span-4 md:col-span-2 lg:col-span-4 hidden md:block">
+                            <div class="header-box justify-end">
+                                <a href="#"><svg class="w-6 text-white" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M4.00488 16V4H2.00488V2H5.00488C5.55717 2 6.00488 2.44772 6.00488 3V15H18.4433L20.4433 7H8.00488V5H21.7241C22.2764 5 22.7241 5.44772 22.7241 6C22.7241 6.08176 22.7141 6.16322 22.6942 6.24254L20.1942 16.2425C20.083 16.6877 19.683 17 19.2241 17H5.00488C4.4526 17 4.00488 16.5523 4.00488 16ZM6.00488 23C4.90031 23 4.00488 22.1046 4.00488 21C4.00488 19.8954 4.90031 19 6.00488 19C7.10945 19 8.00488 19.8954 8.00488 21C8.00488 22.1046 7.10945 23 6.00488 23ZM18.0049 23C16.9003 23 16.0049 22.1046 16.0049 21C16.0049 19.8954 16.9003 19 18.0049 19C19.1095 19 20.0049 19.8954 20.0049 21C20.0049 22.1046 19.1095 23 18.0049 23Z">
+                                        </path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Three columns even layout -->
+        </div>
+    </section>
+
+    <!-- Hero Banner -->
+
+    <section class="hero-bg">
+        <div class="container px-6 m-auto">
+            <div class="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
+                <div class="col-span-4 lg:col-span-6">
+                    <div class="hero-box">
+                        <div class="text-left pt-10 md:pt-0">
+                            <h2 class="text-3xl lg:text-5xl xl:text-7xl font-bold text-[#333333] text-left">Savour Your
+                                <br>
+                                <span class="text-[#cc5500]"> Favourite Meals</span> <br>
+                                With Your Family!</h2>
+                            <p class="text-left text-base lg:text-lg w-full md:w-4/5 py-4 text-[#333333] font-normal">
+                                Enjoy
+                                cherished
+                                meals with loved ones, savouring every bite and creating precious
+                                memories together!</p>
+                            <a class="main-btn" href="#">
+                                <p class="mainbtn-text">Book Your Table </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-4 lg:col-span-6">
+
+                    <div class="hero-box">
+                        <div
+                            class="flex-[1] hover:flex-[3] h-auto md:h-[400px] lg:h-[560px] transition-all delay-150 relative group ">
+                            <img class="w-full h-auto md:h-[400px] lg:h-[560px] object-cover rounded-md relative"
+                                src="images/test1.png" alt="">
+                            <div class="vec-box">
+                                <p class="text-gray-950 text-lg font-semibold py-2 px-4">Awesome</p>
+                                <div class="flex px-4 gap-1"> <span class="text-7xl font-bold text-orange-600">5</span>
+                                    <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path
+                                            d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-[1] hover:flex-[3] h-[560px] transition-all delay-150 relative group hidden md:block">
+                            <img class="w-full h-auto md:h-[560px] object-cover rounded-md relative"
+                                src="images/test2.png" alt="">
+                            <div class="vec-box">
+                                <p class="text-gray-950 text-lg font-semibold py-2 px-4">Awesome</p>
+                                <div class="flex px-4 gap-1"> <span class="text-7xl font-bold text-orange-600">5</span>
+                                    <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path
+                                            d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-[1] hover:flex-[3] h-[560px] transition-all delay-150 relative group hidden md:block">
+                            <img class="w-full h-auto md:h-[560px] object-cover rounded-md relative"
+                                src="images/test3.png" alt="">
+                            <div class="vec-box">
+                                <p class="text-gray-950 text-lg font-semibold py-2 px-4">Awesome</p>
+                                <div class="flex px-4 gap-1"> <span class="text-7xl font-bold text-orange-600">5</span>
+                                    <svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path
+                                            d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section -->
+
+    <section class="py-12 lg:py-24">
+        <div class="container m-auto px-6">
+            <div class="text-left">
+                <h2 class="text-3xl lg:text-5xl xl:text-7xl text-left text-[#333333] font-bold pb-4">Our Service</h2>
+                <p class="text-base lg:text-lg font-normal w-full lg:w-1/2 text-[#333333]">Lorem ipsum dolor sit amet
+                    consectetur adipisicing
+                    elit. Maxime
+                    accusamus ratione hic commodi
+                    aspernatur fugit? Rerum molestiae nisi tempora iure hic ipsa debitis quam optio?</p>
+            </div>
+            <!-- Component: Three columns even layout -->
+
+            <div class="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12 pt-12">
+                <div class="col-span-4">
+                    <div class="service-box group">
+                        <p class="service-box-p">Take-away</p>
+                        <img class="w-full rounded-lg group-hover:scale-104 transition-all delay-100 h-auto md:h-44 lg:h-80 object-cover"
+                            src="images/article2.png" alt="">
+                        <p class="service-box-time "><b>Waiting Time :</b>
+                            Approx. 1
+                            hour</p><br>
+                        <button class="service-box-btn">Book
+                            Your
+                            Table</button>
+                    </div>
+                </div>
+                <div class="col-span-4">
+                    <div class="service-box group">
+                        <p class="service-box-p">Dine In</p>
+                        <img class="w-full rounded-lg group-hover:scale-104 transition-all delay-100 h-auto md:h-44 lg:h-80 object-cover"
+                            src="images/article3.png" alt="">
+                        <p class="service-box-time "><b>Waiting Time :</b>
+                            Approx. 1
+                            hour</p><br>
+                        <button class="service-box-btn">Book
+                            Your
+                            Table</button>
+                    </div>
+                </div>
+                <div class="col-span-4 ">
+                    <div class="service-box group">
+                        <p class="service-box-p">Home Delivery</p>
+                        <img class="w-full rounded-lg group-hover:scale-104 transition-all delay-100 h-auto md:h-44 lg:h-80 object-cover"
+                            src="images/article1.png" alt="">
+                        <p class="service-box-time "><b>Waiting Time :</b>
+                            Approx. 1
+                            hour</p><br>
+                        <button class="service-box-btn">Book
+                            Your
+                            Table</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Three columns even layout -->
+        </div>
+    </section>
+
+    <!-- About us section -->
+
+    <section class="py-2 md:py-24 pb-10">
+        <div class="container m-auto px-6">
+            <div class="grid grid-cols-4 gap-10 md:grid-cols-8 lg:grid-cols-12">
+                <div class="col-span-4 lg:col-span-6">
+                    <div>
+                        <img class="w-full h-auto lg:h-[600px] object-cover rounded-xl" src="images/about.png" alt="">
+                    </div>
+                </div>
+                <div class="col-span-4 lg:col-span-6">
+                    <div class="about-us-box">
+                        <p class="title-p">
+                            About Us</p>
+                        <h2 class="title">Groundbreaking Initiative</h2>
+                        <p class="d-sub-title">Launched in
+                            London to
+                            revolutionize the dining
+                            experience.</p>
+                        <span class="d-text">From avant-garde fine dining establishments to casual neighborhood
+                            eateries, London's food
+                            landscape is set to undergo a dramatic transformation. These experimental menus will feature
+                            unconventional ingredient combinations</span> <br>
+                        <button class="service-box-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu section -->
+
+    <section class="py-8 md:py-24 bg-[url('images/menu-bg.png')] bg-cover bg-no-repeat">
+        <div class="container m-auto px-6">
+            <div class="text-center">
+                <p class="title-p">Our Popular Food</p>
+                <h2 class="title">Top Food Menu <br> Selection</h2>
+            </div>
+            <div class="pt-4 md:pt-20">
+                <div class="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
+                    <div class="col-span-4 lg:col-span-3">
+                        <div class="food-box">
+                            <span class="food-offer">-5%</span>
+                            <img class="w-4/5 m-auto" src="images/menu-item1.png" alt="">
+                            <p class="food-price">$25.20 <s class="prv-price">$30.20</s></p>
+                            <p class="food-rating"> <svg class="w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                            </p><br>
+                            <button class="secondary-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-span-4 lg:col-span-3">
+                        <div class="food-box">
+                            <span class="food-offer">-5%</span>
+                            <img class="w-4/5 m-auto" src="images/menu-item2.png" alt="">
+                            <p class="food-price">$25.20 <s class="prv-price">$30.20</s></p>
+                            <p class="food-rating"> <svg class="w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                            </p><br>
+                            <button class="secondary-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-span-4 lg:col-span-3">
+                        <div class="food-box">
+                            <span class="food-offer">-5%</span>
+                            <img class="w-4/5 m-auto" src="images/menu-item3.png" alt="">
+                            <p class="food-price">$25.20 <s class="prv-price">$30.20</s></p>
+                            <p class="food-rating"> <svg class="w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                            </p><br>
+                            <button class="secondary-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-span-4 lg:col-span-3">
+                        <div class="food-box">
+                            <span class="food-offer">-5%</span>
+                            <img class="w-4/5 m-auto" src="images/menu-item4.png" alt="">
+                            <p class="food-price">$25.20 <s class="prv-price">$30.20</s></p>
+                            <p class="food-rating"> <svg class="w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                            </p><br>
+                            <button class="secondary-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-span-4 lg:col-span-3">
+                        <div class="food-box">
+                            <span class="food-offer">-5%</span>
+                            <img class="w-4/5 m-auto" src="images/menu-item5.png" alt="">
+                            <p class="food-price">$25.20 <s class="prv-price">$30.20</s></p>
+                            <p class="food-rating"> <svg class="w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                            </p><br>
+                            <button class="secondary-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-span-4 lg:col-span-3">
+                        <div class="food-box">
+                            <span class="food-offer">-5%</span>
+                            <img class="w-4/5 m-auto" src="images/menu-item6.png" alt="">
+                            <p class="food-price">$25.20 <s class="prv-price">$30.20</s></p>
+                            <p class="food-rating"> <svg class="w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                            </p><br>
+                            <button class="secondary-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-span-4 lg:col-span-3">
+                        <div class="food-box">
+                            <span class="food-offer">-5%</span>
+                            <img class="w-4/5 m-auto" src="images/menu-item2.png" alt="">
+                            <p class="food-price">$25.20 <s class="prv-price">$30.20</s></p>
+                            <p class="food-rating"> <svg class="w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                            </p><br>
+                            <button class="secondary-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-span-4 lg:col-span-3">
+                        <div class="food-box">
+                            <span class="food-offer">-5%</span>
+                            <img class="w-4/5 m-auto" src="images/menu-item3.png" alt="">
+                            <p class="food-price">$25.20 <s class="prv-price">$30.20</s></p>
+                            <p class="food-rating"> <svg class="w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+
+                                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                    </path>
+                                </svg>
+                            </p><br>
+                            <button class="secondary-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature section -->
+
+    <section class="py-7 md:py-24 bg-[url('images/service-bg.png')] bg-cover bg-no-repeat">
+        <div class="container m-auto px-6">
+            <div class="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
+                <div class="col-span-4 lg:col-span-3">
+                    <div class="feature-box">
+                        <img class="w-12 h-10 md:h-24 md:w-24 object-contain" src="images/quality-food.svg" alt="">
+                        <h2 class="feature-title">Super Quality Food</h2>
+                        <p class="feature-text">A team of dreamers and doers building unique interactive music and art
+                        </p>
+                    </div>
+                </div>
+                <div class="col-span-4 lg:col-span-3">
+                    <div class="feature-box">
+                        <img class="w-12 h-10 md:h-24 md:w-24 object-contain" src="images/fresh-food.svg" alt="">
+                        <h2 class="feature-title">100% Fresh Food</h2>
+                        <p class="feature-text">A team of dreamers and doers building unique interactive music and art
+                        </p>
+                    </div>
+                </div>
+                <div class="col-span-4 lg:col-span-3">
+                    <div class="feature-box">
+                        <img class="w-12 h-10 md:h-24 md:w-24 object-contain" src="images/resipes.svg" alt="">
+                        <h2 class="feature-title">Original Recipes</h2>
+                        <p class="feature-text">A team of dreamers and doers building unique interactive music and art
+                        </p>
+                    </div>
+                </div>
+                <div class="col-span-4 lg:col-span-3">
+                    <div class="feature-box">
+                        <img class="w-12 h-10 md:h-24 md:w-24 object-contain" src="images/fast-delivary.svg" alt="">
+                        <h2 class="feature-title">Quick Fast Delivery</h2>
+                        <p class="feature-text">A team of dreamers and doers building unique interactive music and art
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+
+    <section class="py-12 md:py-24 bg-[url('images/reservation-bg.png')] bg-cover bg-no-repeat">
+        <div class="container m-auto px-6">
+            <div class="grid grid-cols-4 gap-10 md:grid-cols-8 lg:grid-cols-12">
+                <div class="col-span-4 lg:col-span-6">
+                    <div class="text-left pt-8 md:pt-0 lg:pt-8">
+                        <p class="title-p">Reservations</p>
+                        <h2 class="title">Better Food <br> Forever</h2>
+                        <span class="d-sub-title">Indulge in a culinary revolution and secure your place at the <br>
+                            forefront of gastronomic
+                            innovation. Book your table now.</span>
+                    </div>
+                    <div class="form-box">
+                        <form action="#" method="get">
+                            <input type="text" placeholder="Name">
+                            <input type="tel" placeholder="Mobile">
+                            <input type="email" placeholder="Email">
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div><input type="date" placeholder="Date"></div>
+                                <div><input type="time" placeholder="Time"></div>
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div><input type="number" placeholder="Total"></div>
+                                <div><input class="form-btn" type="submit" placeholder="Submit"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-span-4 lg:col-span-6">
+                    <div>
+                        <img class="w-full rounded-lg" src="images/reservation.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+
+    <section class="py-24 bg-[url('images/sample-bg.png')] bg-cover bg-no-repeat relative" id="dev-overlay">
+        <div class="container m-auto px-6">
+            <div class="text-center pb-12">
+                <h2 class="text-3xl lg:text-5xl xl:text-7xl text-[#fffdd0] text-center relative z-20">Customer Feedback
+                </h2>
+            </div>
+            <div class="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
+                <div class="col-span-4">
+                    <div class="review-box">
+                        <p class="review-rating"> <svg class="w-4" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+                        </p>
+                        <p class="review-txt">
+                            The food here is an absolute culinary masterpiece! Every dish is a symphony of
+                            flavors that transports you to taste bud heaven. The ambiance is perfect for a
+                            romantic dinner or a night out with friends.
+                        </p>
+                        <h2 class="review-author">Bessie Cooper</h2>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-4">
+                    <div class="review-box">
+                        <p class="review-rating"> <svg class="w-4" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+                        </p>
+                        <p class="review-txt">
+                            I've been to countless restaurants, but this one
+                            stands out as a true culinary experience. The
+                            service is impeccable, and the attention to detail
+                            is evident. I felt like royalty. A must-visit for food
+                            lovers!
+                        </p>
+                        <h2 class="review-author">Sky Walker</h2>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-4 ">
+                    <div class="review-box">
+                        <p class="review-rating"> <svg class="w-4" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                </path>
+                            </svg>
+                        </p>
+                        <p class="review-txt">
+                            This restaurant exceeded all expectations! The
+                            menu is diverse and offers something for
+                            everyone. The presentation of the dishes is
+                            stunning, and the taste is even better. We can't
+                            wait to come back!
+                        </p>
+                        <h2 class="review-author">Jorge Luke</h2>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+
+    <section class="py-12 md:py-24">
+        <div class="container m-auto px-6">
+            <div class="text-center pb-14">
+                <p class="title-p">Latest Article's</p>
+                <h2 class="title">Helpful Advice <br> and Handy Tips</h2>
+            </div>
+            <div class="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
+                <div class="col-span-4 lg:col-span-8">
+                    <div>
+                        <img class="w-full rounded-lg" src="images/article1.png" alt="">
+                        <h4 class="text-xl md:text-3xl lg:text-4xl font-bold text-left py-4 text-[#333333]">Picnic
+                            Perfection: A
+                            Guide to
+                            Creating the Ultimate
+                            Outdoor Feast</h4>
+                        <p class="text-sm md:text-base font-normal text-[#bbbbbb]">Discover the art of the perfect
+                            picnic with this
+                            comprehensive guide. From choosing the ideal
+                            location to crafting a delectable menu. Create unforgettable outdoor memories with friends
+                            and family.</p>
+                    </div>
+                </div>
+                <div class="col-span-4">
+                    <div class="flex flex-col md:flex-row gap-2">
+                        <div class="basis-2/5"><img class="w-full rounded-lg" src="images/article3.png" alt=""></div>
+                        <div class="basis-3/5">
+                            <p class="text-base md:text-xl lg:text-2xl font-bold text-left text-[#333333] py-2">Savor
+                                the Classic:
+                                Indulge in
+                                Our Classic Tomato Soup</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-2 pt-4">
+                        <div class="basis-2/5"><img class="w-full rounded-lg" src="images/article2.png" alt=""></div>
+                        <div class="basis-3/5">
+                            <p class="text-base md:text-xl lg:text-2xl font-bold text-left text-[#333333] py-2">Food
+                                Served with a Smile: Our
+                                Commitment to You</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-2 pt-4">
+                        <div class="basis-2/5"><img class="w-full rounded-lg" src="images/article4.png" alt=""></div>
+                        <div class="basis-3/5">
+                            <p class="text-base md:text-xl lg:text-2xl font-bold text-left text-[#333333] py-2">
+                                Experience the Difference: Exceptional
+                                Wait Service</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-2 pt-4">
+                        <div class="basis-2/5"><img class="w-full rounded-lg" src="images/article5.png" alt=""></div>
+                        <div class="basis-3/5">
+                            <p class="text-base md:text-xl lg:text-2xl font-bold text-left text-[#333333] py-2">Savor
+                                the Classic:
+                                Indulge in
+                                Our Classic Tomato Soup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer class="bg-[#333333] py-24">
+        <div class="container m-auto px-6">
+            <div class="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12">
+                <div class="col-span-4 md:col-span-6">
+                    <div>
+                        <a href="#"><img class="w-48"
+                                src="https://allclonescript.com/lovebistro/tailwind/html-template/assets/images/logo-light.svg"
+                                alt=""></a>
+                        <p class="footer-txt">From avant-garde fine dining establishments to casual
+                            neighborhood
+                            eateries, London's food landscape is set to undergo a dramatic
+                            transformation.</p>
+                    </div>
+                </div>
+                <div class="col-span-4 md:col-span-2">
+                    <div class="flex flex-col gap-4 flex-start">
+                        <p class="fotter-title">More</p>
+                        <a href="#" class="footer-items">Terms of Services </a>
+                        <a href="#" class="footer-items">Privacy Policy</a>
+                        <a href="#" class="footer-items">Cookie Policy</a>
+                    </div>
+                </div>
+                <div class="col-span-4 md:col-span-2">
+                    <div class="text-left">
+                        <p class="fotter-title">Download App</p> <br>
+                        <div class="flex gap-2">
+                            <div><img class="w-full" src="images/qr-code.png" alt=""></div>
+                            <div>
+                                <a href="#"><img class="w-full" src="images/google-play.png" alt=""></a>
+                                <a href="#"><img class="w-full mt-3" src="images/app-store.png" alt=""></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-span-4 md:col-span-2">
+                    <div class="flex flex-col gap-4">
+                        <p class="fotter-title">Follow us:</p>
+                        <a href="#" class="footer-items">Facebook</a>
+                        <a href="#" class="footer-items">Instagram</a>
+                        <a href="#" class="footer-items">Youtube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Section -->
+
+    <section class="py-2 bg-slate-200">
+        <div class="container m-auto px-6">
+            <p class="text-center text-gray-900 font-normal">Designed and Developed by <a href="#">Akashbk201</a></p>
+        </div>
+    </section>
+
+
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+
+    <script>
+        var glide05 = new Glide('.glide-05', {
+            type: 'carousel',
+            focusAt: 'center',
+            perView: 1,
+            autoplay: 3000,
+            animationDuration: 700,
+            gap: 24,
+            classes: {
+                activeNav: '[&>*]:bg-slate-700',
+            },
+            breakpoints: {
+                1024: {
+                    perView: 1
+                },
+                640: {
+                    perView: 1
+                }
+            },
+        });
+
+        glide05.mount();
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
